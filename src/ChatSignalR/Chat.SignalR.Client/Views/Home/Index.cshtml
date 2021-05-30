@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>SignalR Chat </p>
+</div>
+
+<form class="needs-validation" novalidate>
+    <div class="mb-3">
+        <label for="userName" class="form-label">User Name</label>
+        <input type="text" class="form-control" id="userName" aria-describedby="userName" required>
+        <div class="invalid-feedback">
+            Please choose a username.
+        </div>
+    </div>
+    <div class="mb-3">
+        <select id="room" class="form-control" aria-label="Default select example" required>
+            <option value="" selected>Select chat room</option>
+            <option value="General">General</option>
+            <option value="Gaming">Gaming</option>
+        </select>
+        <div class="invalid-feedback">
+            Select room
+        </div>
+    </div>
+    <button type="button" id="connect" class="btn btn-primary" onclick="connectToHub();">Connect</button>
+</form>
+
+@section Scripts {
+    <script src="~/js/chat.js"></script>
+    <script src="~/js/validationForm.js"></script>
+}

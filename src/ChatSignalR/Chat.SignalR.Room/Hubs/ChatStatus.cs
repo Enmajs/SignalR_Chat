@@ -10,12 +10,12 @@ namespace Chat.SignalR.Room.Hubs
     {
         public List<string> Connections { get; set; }
 
-        public Dictionary<string, HashSet<UserDTO>> Users = new Dictionary<string, HashSet<UserDTO>>();
+        //public Dictionary<string, HashSet<UserDTO>> Users = new Dictionary<string, HashSet<UserDTO>>();
 
         public ChatStatus()
         {
             Connections = new List<string>();
-            Users = new Dictionary<string, HashSet<UserDTO>>();
+            //Users = new Dictionary<string, HashSet<UserDTO>>();
         }
     }
 }
